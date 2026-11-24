@@ -44,4 +44,4 @@ class ResponseParser:
     def _clean_snippet(self, snippet: str) -> str:
         """Убирает из фрагмента HTML-теги и превращает спецсимволы (&quot; и т.п.) в обычные."""
         without_tags = self._TAG_PATTERN.sub("", snippet)
-        return html.unescape(without_tags)
+        return html.unescape(without_tags).strip()
