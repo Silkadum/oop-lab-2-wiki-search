@@ -1,14 +1,11 @@
 import requests
 
+import constants
 from wikipedia_error import WikipediaError
 
 
 class WikipediaClient:
     """Отправляет поисковый запрос к API Википедии и возвращает ответ сервера в виде текста."""
-
-    _API_URL = "https://ru.wikipedia.org/w/api.php"
-    _USER_AGENT = "WikiSearchLab/1.0 (educational project)"
-    _TIMEOUT_SECONDS = 10
 
     def search(self, query: str) -> str:
         """Выполняет поиск и возвращает JSON-ответ сервера как строку."""
@@ -22,10 +19,10 @@ class WikipediaClient:
 
         try:
             response = requests.get(
-                self._API_URL,
+                constants.API_URL,
                 params=params,
-                headers={"User-Agent": self._USER_AGENT},
-                timeout=self._TIMEOUT_SECONDS,
+                headers={"User-Agent": constants.USER_AGENT},
+                timeout=constants.TIMEOUT_SECONDS,
             )
             response.raise_for_status()
         except requests.Timeout:

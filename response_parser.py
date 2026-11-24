@@ -2,14 +2,13 @@ import html
 import json
 import re
 
+import constants
 from wikipedia_error import WikipediaError
 from search_result import SearchResult
 
 
 class ResponseParser:
     """Превращает JSON-ответ API Википедии в список результатов поиска."""
-
-    _TAG_PATTERN = re.compile(r"<[^>]+>")
 
     def parse(self, response_text: str) -> list[SearchResult]:
         """Разбирает ответ сервера. Пустой список означает, что ничего не найдено."""
@@ -43,5 +42,5 @@ class ResponseParser:
 
     def _clean_snippet(self, snippet: str) -> str:
         """Убирает из фрагмента HTML-теги и превращает спецсимволы (&quot; и т.п.) в обычные."""
-        without_tags = self._TAG_PATTERN.sub("", snippet)
+        without_tags = re.sub(constants.HTML_TAG_PATTERN, "", snippet)
         return html.unescape(without_tags).strip()

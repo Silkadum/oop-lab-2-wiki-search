@@ -1,10 +1,9 @@
+import constants
 from search_result import SearchResult
 
 
 class ConsoleOutput:
     """Печатает в консоль результаты поиска и сообщения для пользователя."""
-
-    _SNIPPET_MAX_LENGTH = 150
 
     def show_welcome(self) -> None:
         print("Поиск по русской Википедии.")
@@ -35,6 +34,6 @@ class ConsoleOutput:
 
     def _shorten(self, text: str) -> str:
         """Обрезает длинный фрагмент, чтобы список оставался читаемым."""
-        if len(text) <= self._SNIPPET_MAX_LENGTH:
+        if len(text) <= constants.SNIPPET_MAX_LENGTH:
             return text
-        return text[: self._SNIPPET_MAX_LENGTH].rstrip() + "…"
+        return text[: constants.SNIPPET_MAX_LENGTH].rstrip() + "…"

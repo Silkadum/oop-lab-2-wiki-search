@@ -7,18 +7,18 @@ class SearchResult:
         if page_id <= 0:
             raise ValueError("Идентификатор статьи должен быть положительным числом.")
 
-        self._title = title
-        self._page_id = page_id
-        self._snippet = snippet
+        self.__title = title
+        self.__page_id = page_id
+        self.__snippet = snippet
 
     @property
     def title(self) -> str:
-        return self._title
+        return self.__title
 
     @property
     def page_id(self) -> int:
-        return self._page_id
+        return self.__page_id
 
     @property
     def snippet(self) -> str:
-        return self._snippet
+        return self.__snippet
