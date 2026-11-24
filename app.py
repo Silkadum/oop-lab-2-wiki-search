@@ -1,10 +1,10 @@
-from api.response_parser import ResponseParser
-from api.wikipedia_client import WikipediaClient
-from api.wikipedia_error import WikipediaError
+from response_parser import ResponseParser
+from wikipedia_client import WikipediaClient
+from wikipedia_error import WikipediaError
 from browser_opener import BrowserOpener
-from models.search_result import SearchResult
-from ui.console_input import ConsoleInput
-from ui.console_output import ConsoleOutput
+from search_result import SearchResult
+from console_input import ConsoleInput
+from console_output import ConsoleOutput
 
 
 class SearchApp:

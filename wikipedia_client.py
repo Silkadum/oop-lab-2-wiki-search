@@ -1,6 +1,6 @@
 import requests
 
-from api.wikipedia_error import WikipediaError
+from wikipedia_error import WikipediaError
 
 
 class WikipediaClient:

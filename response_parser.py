@@ -2,8 +2,8 @@ import html
 import json
 import re
 
-from api.wikipedia_error import WikipediaError
-from models.search_result import SearchResult
+from wikipedia_error import WikipediaError
+from search_result import SearchResult
 
 
 class ResponseParser:

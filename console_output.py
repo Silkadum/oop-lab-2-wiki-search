@@ -1,4 +1,4 @@
-from models.search_result import SearchResult
+from search_result import SearchResult
 
 
 class ConsoleOutput:
