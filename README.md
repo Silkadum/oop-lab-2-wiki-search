@@ -44,18 +44,15 @@ python main.py
 ## Структура проекта
 
 ```
-├── main.py                  # точка входа: создаёт объекты и запускает приложение
-├── app.py                   # SearchApp — управляет циклом поиска и выбора статьи
-├── browser_opener.py        # BrowserOpener — ссылка на статью и открытие в браузере
-├── models/
-│   └── search_result.py     # SearchResult — найденная статья
-├── api/
-│   ├── wikipedia_client.py  # WikipediaClient — запрос к API Википедии
-│   ├── response_parser.py   # ResponseParser — разбор JSON-ответа
-│   └── wikipedia_error.py   # WikipediaError — ошибки сети и API
-└── ui/
-    ├── console_input.py     # ConsoleInput — ввод и проверка формата
-    └── console_output.py    # ConsoleOutput — вывод результатов и сообщений
+├── main.py              # точка входа: создаёт объекты и запускает приложение
+├── app.py               # SearchApp — управляет циклом поиска и выбора статьи
+├── search_result.py     # SearchResult — найденная статья
+├── wikipedia_client.py  # WikipediaClient — запрос к API Википедии
+├── response_parser.py   # ResponseParser — разбор JSON-ответа
+├── wikipedia_error.py   # WikipediaError — ошибки сети и API
+├── console_input.py     # ConsoleInput — ввод и проверка формата
+├── console_output.py    # ConsoleOutput — вывод результатов и сообщений
+└── browser_opener.py    # BrowserOpener — ссылка на статью и открытие в браузере
 ```
 
 ## Запуск в WSL
