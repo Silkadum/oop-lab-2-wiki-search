@@ -82,6 +82,7 @@ python main.py
 
 ```
 ├── main.py              # точка входа: создаёт объекты и запускает приложение
+├── constants.py         # константы: адреса Википедии, параметры запроса, команды
 ├── app.py               # SearchApp — управляет циклом поиска и выбора статьи
 ├── search_result.py     # SearchResult — найденная статья
 ├── wikipedia_client.py  # WikipediaClient — запрос к API Википедии
